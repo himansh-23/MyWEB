@@ -1,34 +1,107 @@
- <!DOCTYPE html5>
- <html>
- <head>
-     <title>This is My Portfolio</title>
-     <meta charset="UTF-8">
-     <link rel="stylesheet" href="./main.css">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
- </head>
- <body>
-    <h1> Welcome to my website!!</h1>
-<!--  
- <canvas class="simple_animation"></canvas>
+<!doctype html5>
+<html>
 
- <canvas class="moving_object"></canvas>
+<head>
+    <title>This is My Portfolio</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+    $("#sendMail").click(function(){
+    $.ajax({
+    url: 'https://formspree.io/himanshu00096@gmail.com',
+    type: 'POST',
+    data: {
+        name:"hello"
+    },
+    headers: {
+        referer: "https://formspree.io/himanshu00096@gmail.com"
+    },
+    success: function (status) {
+        console.log(status);
+    }
+});
+  });
+}); 
+    </script>
+</head>
 
- <canvas class="moving_pic"></canvas>
+<body>
+    <section class="align">
+        <p class="text" id="ani"></p>
+        <img class="customize" src="./profile.jpg" width=150px height=150px>
+        <p class="text3"> I'm Software Developer based in Bangalore and Currently working at Niyo Solutions.</p>
+    </section>
 
- <canvas class="moving_bar"></canvas>
+    <section class="align2">
 
- <canvas class="rotating_image"></canvas>
+        <article class="align4">
+            <img style="float:left;" src="./spring.png" width=100px height=100px alt="springboot">
+            <div class="align5">
+                <h4 class="text2">Spring</h4>
+                <div class="align4">
+                    <canvas class="anime1"> </canvas>
+                    <span style="margin-left:5px;" class="text">70%</span>
+                </div>
+                <p class="text2">Spring felt like home to me very straignt forward easy to pick up t became my go-to
+                    tool whenever I need to do backend.</p>
+            </div>
+        </article>
 
- <div></div> -->
+        <article class="align4">
+            <img style="float:left;" src="./angular6.png" width=100px height=100px alt="angular6">
+            <div class="align5">
+                <h4 class="text2">Angular 6</h4>
+                <div class="align4">
+                    <canvas class="anime2"> </canvas>
+                    <span style="margin-left:5px;" class="text">60%</span>
+                </div>
 
- <div class="rotate_with_shift1">H</div>
- <div class="rotate_with_shift2">I</div>
- <div class="rotate_with_shift3">M</div>
- <div class="rotate_with_shift4">A</div>
- <div class="rotate_with_shift5">N</div>
- <div class="rotate_with_shift6">S</div>
- <div class="rotate_with_shift7">H</div>
- <div class="rotate_with_shift8">U</div>
+                <p class="text2">Spring felt like home to me very straignt forward easy to pick up t became my go-to
+                    tool whenever I need to do backend.</p>
+            </div>
+        </article>
 
+        <article class="align4">
+            <img style="float:left;" src="./java8.png" width=100px height=100px alt="java8">
+            <div class="align5">
+                <h4 class="text2">Java</h4>
+                <div class="align4">
+                    <canvas class="anime3"> </canvas>
+                    <span style="margin-left:5px;" class="text">80%</span>
+                </div>
+                <p class="text2">It is for sure my strongest language, I've been able to play with it in many different
+                    scopes ranging from backend development with spring boot,hibernate </p>
+            </div>
+        </article>
+
+    </section>
+    <section class="align box">
+        <p class="text3" style="color:black;">CONTACT</p>
+        <p class="text3" style="color:black;">Have A question or want to work together? </p>
+        <textarea class="text3 cust" style="background-color:black;" type="text"
+            placeholder="Write Your Message"></textarea>
+        <button id="sendMail">Submit</button>
+    </section>
+    <script>
+        var s = "Hello I'M Himansh";
+        var text = "";
+        var i = 0;
+        function nameAnimation() {
+            if (i < s.length) {
+                text = text + s.charAt(i) + "|";
+                document.getElementById("ani").innerHTML = text;
+                text = text.substr(0, text.length - 1);
+                i++;
+                setTimeout(nameAnimation, 100);
+            }
+            document.getElementById("ani").innerHTML = text;
+        }
+
+        nameAnimation();
+    </script>
 </body>
- </html>
+
+</html>

@@ -1,460 +1,661 @@
+body {
+    background-color: whitesmoke;
+}
+
+.align {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.align2 {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: left;
+    grid-gap: 10px;
+    width:60%;
+    margin-left: auto;
+    margin-right:auto;
+}
+
+.align4 {
+    flex-direction: row;
+    padding: 2%;
+    justify-content: left;
+    width: 100%;
+}
+
+.align5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.text {
+    color: #000000;
+    font-size: 30;
+    text-align: center;
+    font-family: "Comic Sans MS, Comic Sans, cursive";
+}
+
+.text2 {
+    color: #000000;
+    font-size: 20;
+    padding: 0;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 10px;
+    margin-inline-end: 0px;
+}
+
+.text3 {
+    color: #000000;
+    font-size: 22;
+    text-align: center;
+}
+
+.cust {
+    width: 100%;
+    text-align: left;
+}
+
+.box {
+    border: 3px solid #000000!important;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button {
+    background-color: #4CAF50;
+    color: 000000;
+    padding: 12px 25px;
+    position: initial;
+    text-align: center;
+    box-shadow : 0 5px 0 rgb(40, 180, 45) ;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+button:active{
+    box-shadow : 0 2px 0 rgb(40, 180, 45) ;
+    transform:translateY(3px);
+
+}
+
+.customize {
+    margin: 0 auto;
+    position: relative;
+    /* margin-left: 45%;
+    margin-right: 45%; */
+    border-radius: 50%;
+    background-size: cover;
+    background-position: top center;
+}
+
+@media only screen and (max-width: 600px) {
+    .box {
+        border: 3px solid #000000!important;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .align2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        grid-gap: 10px;
+        width:100%;
+        margin-left: auto;
+        margin-right:auto;
+    }
+    
+    .align4 {
+        flex-direction: row;
+        padding: 2%;
+        justify-content: left;
+        width: 100%;
+    }
+
+}
+
+.anime1 {
+    animation: bar1 1s linear 1;
+    height: 3%;
+    width: 70%;
+    margin-left: 3px;
+    background-color: blue;
+    border: 1px solid #000000;
+}
+
+@keyframes bar1 {
+    from {
+        left: 0px;
+        background-color: blue;
+        width: 0%;
+    }
+    to {
+        width: 70%;
+        background-color: blue;
+    }
+}
+
+.anime2 {
+    animation: bar2 1s linear 1;
+    height: 3%;
+    width: 60%;
+    margin-left: 3px;
+    background-color: blue;
+    border: 1px solid #000000;
+}
+
+@keyframes bar2 {
+    from {
+        left: 0px;
+        background-color: blue;
+        width: 0%;
+    }
+    to {
+        width: 60%;
+        background-color: blue;
+    }
+}
+
+.anime3 {
+    animation: bar3 1s linear 1;
+    height: 3%;
+    width: 80%;
+    margin-left: 3px;
+    background-color: blue;
+    border: 1px solid #000000;
+}
+
+@keyframes bar3 {
+    from {
+        left: 0px;
+        background-color: blue;
+        width: 0%;
+    }
+    to {
+        width: 80%;
+        background-color: blue;
+    }
+}
+
+
+@keyframes type {
+    0% {}
+    12.5% {
+        content: "H";
+    }
+    25% {
+        content: "HI";
+    }
+    37.5% {
+        content: "HIM";
+    }
+    50% {
+        content: "HIMA";
+    }
+    67.5% {
+        content: "HIMAN";
+    }
+    75% {
+        content: "HIMANS";
+    }
+    82.5% {
+        content: "HIMANSH";
+    }
+    100% {
+        content: "HIMANSHU";
+    }
+}
+
 .simple_animation {
-    width:300px;
+    width: 300px;
     height: 300px;
     border-radius: 50%;
     animation-name: example;
     animation-duration: 10s;
-    background-color:yellowgreen;
+    background-color: yellowgreen;
 }
 
-@keyframes example{
-    from {background-color:white;}
-    to {background-color:black;}
+@keyframes example {
+    from {
+        background-color: white;
+    }
+    to {
+        background-color: black;
+    }
 }
 
-.moving_object{
-    width :300px;
-    height:300px;
-    border-radius:50%;
-    animation-name : example2;
-    animation-duration:5s;
+.moving_object {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    animation-name: example2;
+    animation-duration: 5s;
     position: relative;
-    background-color:red;
-    left:5px;
-    animation-iteration-count:3;
-    animation-direction: reverse;  
+    background-color: red;
+    left: 5px;
+    animation-iteration-count: 3;
+    animation-direction: reverse;
 }
 
-@keyframes example2{
-    0%   {background-color:red; left:0px; top:0px;}
-    25%  {background-color:yellow; left:200px; top:0px;}
-    50%  {background-color:blue; left:200px; top:200px;}
-    75%  {background-color:green; left:0px; top:200px;}
-    100% {background-color:red; left:0px; top:0px;}
+@keyframes example2 {
+    0% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
+    25% {
+        background-color: yellow;
+        left: 200px;
+        top: 0px;
+    }
+    50% {
+        background-color: blue;
+        left: 200px;
+        top: 200px;
+    }
+    75% {
+        background-color: green;
+        left: 0px;
+        top: 200px;
+    }
+    100% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
 }
 
-.moving_pic{
-
-    width :300px;
-    height:300px;
-    border-radius:50%;
-    animation-name : example2;
-    animation-duration:5s;
+.moving_pic {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    animation-name: example2;
+    animation-duration: 5s;
     position: relative;
-    background-color:red;
-    left:5px;
-    animation-iteration-count:infinite;
+    background-color: red;
+    left: 5px;
+    animation-iteration-count: infinite;
     animation-direction: alternate;
-
 }
 
 /* the Speed Curve of the Animation*/
 
-.moving_bar{
-    width:30px;
+.moving_bar {
+    width: 30px;
     height: 20px;
-    position:relative;
-    animation-name:example3;
+    position: relative;
+    animation-name: example3;
     animation-duration: 3s;
-    background-color:teal;
-    animation-iteration-count:1;
+    background-color: teal;
+    animation-iteration-count: 1;
     /*   how a animation work over 1 iteration  */
-    animation-timing-function:cubic-bezier(0.19, 1, 0.22, 1);
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
     /* it let the element place at end after animation end */
-    left:300px;
-    
+    left: 300px;
     /* animation : "take three argument 1 name 2 duration 3 iteration-count like infinite" */
 }
 
-
-
-@keyframes example3{
-    from {left: 0px;}
-    to {left: 300px;}
-
+@keyframes example3 {
+    from {
+        left: 0px;
+    }
+    to {
+        left: 300px;
+    }
 }
 
-.rotating_image{
+.rotating_image {
     background-image: url("../../../Downloads/abstract-dark-wood-lo-1920x1080.jpg");
     width: 300px;
     height: 300px;
-    border-radius:50%;
+    border-radius: 50%;
     position: relative;
-    left:210px;
-    animation:example4 5s infinite;
+    left: 210px;
+    animation: example4 5s infinite;
 }
 
-@keyframes example4{
-   0%{transform-origin:center center;
-    transform:rotate(-360deg);
-   }
-
+@keyframes example4 {
+    0% {
+        transform-origin: center center;
+        transform: rotate(-360deg);
+    }
 }
 
-.rotate_with_shift1{
-
-    width:2%;
-    height:5%;
+.rotate_with_shift1 {
+    width: 2%;
+    height: 5%;
     background-color: darkred;
-    animation:example5-1 5s 1;
-    border-radius:10%;
+    animation: example5-1 5s 1;
+    border-radius: 10%;
     position: absolute;
-    top:40%;
-    left:30%;
-    padding:20px;
+    top: 40%;
+    left: 30%;
+    padding: 20px;
     font-weight: bold;
-    font-size:20px;
+    font-size: 20px;
     color: white;
 }
 
-.rotate_with_shift2{
-
-    width:2%;
-    height:5%;
+.rotate_with_shift2 {
+    width: 2%;
+    height: 5%;
     background-color: darkred;
-    animation:example5-2 5s 1;
-    border-radius:10%;
+    animation: example5-2 5s 1;
+    border-radius: 10%;
     position: absolute;
-    top:40%;
-    left:32.8%;
-    padding:20px;
+    top: 40%;
+    left: 32.8%;
+    padding: 20px;
     font-weight: bold;
-    font-size:20px;
+    font-size: 20px;
     color: white;
 }
 
-.rotate_with_shift3{
-
-    width:2%;
-    height:5%;
+.rotate_with_shift3 {
+    width: 2%;
+    height: 5%;
     background-color: darkred;
-    animation:example5-3 5s 1;
-    border-radius:10%;
+    animation: example5-3 5s 1;
+    border-radius: 10%;
     position: absolute;
-    top:40%;
-    left:34.8%;
-    padding:20px;
+    top: 40%;
+    left: 34.8%;
+    padding: 20px;
     font-weight: bold;
-    font-size:20px;
+    font-size: 20px;
     color: white;
 }
 
-.rotate_with_shift4{
-
-    width:2%;
-    height:5%;
+.rotate_with_shift4 {
+    width: 2%;
+    height: 5%;
     background-color: darkred;
-    animation:example5-4 5s 1;
-    border-radius:10%;
+    animation: example5-4 5s 1;
+    border-radius: 10%;
     position: absolute;
-    top:40%;
-    left:36.8%;
-    padding:20px;
+    top: 40%;
+    left: 36.8%;
+    padding: 20px;
     font-weight: bold;
-    font-size:20px;
+    font-size: 20px;
     color: white;
 }
 
-.rotate_with_shift5{
-
-    width:2%;
-    height:5%;
+.rotate_with_shift5 {
+    width: 2%;
+    height: 5%;
     background-color: darkred;
-    animation:example5-5 5s 1;
-    border-radius:10%;
+    animation: example5-5 5s 1;
+    border-radius: 10%;
     position: absolute;
-    top:40%;
-    left:38.8%;
-    padding:20px;
+    top: 40%;
+    left: 38.8%;
+    padding: 20px;
     font-weight: bold;
-    font-size:20px;
+    font-size: 20px;
     color: white;
 }
 
-.rotate_with_shift6{
-
-    width:2%;
-    height:5%;
+.rotate_with_shift6 {
+    width: 2%;
+    height: 5%;
     background-color: darkred;
-    animation:example5-6 5s 1;
-    border-radius:10%;
+    animation: example5-6 5s 1;
+    border-radius: 10%;
     position: absolute;
-    top:40%;
-    left:40.8%;
-    padding:20px;
+    top: 40%;
+    left: 40.8%;
+    padding: 20px;
     font-weight: bold;
-    font-size:20px;
+    font-size: 20px;
     color: white;
 }
 
-.rotate_with_shift7{
-
-    width:2%;
-    height:5%;
+.rotate_with_shift7 {
+    width: 2%;
+    height: 5%;
     background-color: darkred;
-    animation:example5-7 5s 1;
-    border-radius:10%;
+    animation: example5-7 5s 1;
+    border-radius: 10%;
     position: absolute;
-    top:40%;
-    left:42.8%;
-    padding:20px;
+    top: 40%;
+    left: 42.8%;
+    padding: 20px;
     font-weight: bold;
-    font-size:20px;
+    font-size: 20px;
     color: white;
 }
 
-.rotate_with_shift8{
-
-    width:2%;
-    height:5%;
+.rotate_with_shift8 {
+    width: 2%;
+    height: 5%;
     background-color: darkred;
-    animation:example5-8 5s 1;
-    border-radius:10%;
+    animation: example5-8 5s 1;
+    border-radius: 10%;
     position: absolute;
-    top:40%;
-    left:44.8%;
-    padding:20px;
+    top: 40%;
+    left: 44.8%;
+    padding: 20px;
     font-weight: bold;
-    font-size:20px;
+    font-size: 20px;
     color: white;
 }
 
-@keyframes example5-1{
-    0%{
-        transform:rotate(0deg);
-        left:0%;
+@keyframes example5-1 {
+    0% {
+        transform: rotate(0deg);
+        left: 0%;
     }
-
-    25%{
+    25% {
         transform: rotate(90deg);
-        left:0%;
+        left: 0%;
     }
-
-    50%{
-        transform:rotate(180deg);
-        left:20%;
+    50% {
+        transform: rotate(180deg);
+        left: 20%;
         transform: rotate(-180deg);
     }
-
-    75%{
-        background-color:lightgreen;
+    75% {
+        background-color: lightgreen;
         transform: rotate(270deg);
-        left:25%;
+        left: 25%;
     }
-
-    100%{
-        background-color:darkslateblue;
+    100% {
+        background-color: darkslateblue;
         transform: rotate(360deg);
-        left:30%;
+        left: 30%;
     }
 }
 
-@keyframes example5-2{
-    0%{
-        transform:rotate(0deg);
-        left:0%;
+@keyframes example5-2 {
+    0% {
+        transform: rotate(0deg);
+        left: 0%;
     }
-
-    25%{
+    25% {
         transform: rotate(90deg);
-        left:0%;
+        left: 0%;
     }
-
-    50%{
-        transform:rotate(180deg);
-        left:22%;
+    50% {
+        transform: rotate(180deg);
+        left: 22%;
         transform: rotate(-180deg);
     }
-
-    75%{
-        background-color:lightgreen;
+    75% {
+        background-color: lightgreen;
         transform: rotate(270deg);
-        left:27%;
+        left: 27%;
     }
-
-    100%{
-        background-color:darkslateblue;
+    100% {
+        background-color: darkslateblue;
         transform: rotate(360deg);
-        left:32%;
+        left: 32%;
     }
 }
 
-@keyframes example5-3{
-    0%{
-        transform:rotate(0deg);
-        left:0%;
+@keyframes example5-3 {
+    0% {
+        transform: rotate(0deg);
+        left: 0%;
     }
-
-    25%{
+    25% {
         transform: rotate(90deg);
-        left:0%;
+        left: 0%;
     }
-
-    50%{
-        transform:rotate(180deg);
-        left:24%;
+    50% {
+        transform: rotate(180deg);
+        left: 24%;
         transform: rotate(-180deg);
     }
-
-    75%{
-        background-color:lightgreen;
+    75% {
+        background-color: lightgreen;
         transform: rotate(270deg);
-        left:27%;
+        left: 27%;
     }
-
-    100%{
-        background-color:darkslateblue;
+    100% {
+        background-color: darkslateblue;
         transform: rotate(360deg);
-        left:34%;
+        left: 34%;
     }
 }
 
-@keyframes example5-4{
-    0%{
-        transform:rotate(0deg);
-        left:0%;
+@keyframes example5-4 {
+    0% {
+        transform: rotate(0deg);
+        left: 0%;
     }
-
-    25%{
+    25% {
         transform: rotate(90deg);
-        left:0%;
+        left: 0%;
     }
-
-    50%{
-        transform:rotate(180deg);
-        left:26%;
+    50% {
+        transform: rotate(180deg);
+        left: 26%;
         transform: rotate(-180deg);
     }
-
-    75%{
-        background-color:lightgreen;
+    75% {
+        background-color: lightgreen;
         transform: rotate(270deg);
-        left:31%;
+        left: 31%;
     }
-
-    100%{
-        background-color:darkslateblue;
+    100% {
+        background-color: darkslateblue;
         transform: rotate(360deg);
-        left:36%;
+        left: 36%;
     }
 }
 
-@keyframes example5-5{
-    0%{
-        transform:rotate(0deg);
-        left:0%;
+@keyframes example5-5 {
+    0% {
+        transform: rotate(0deg);
+        left: 0%;
     }
-
-    25%{
+    25% {
         transform: rotate(90deg);
-        left:0%;
+        left: 0%;
     }
-
-    50%{
-        transform:rotate(180deg);
-        left:28%;
+    50% {
+        transform: rotate(180deg);
+        left: 28%;
         transform: rotate(-180deg);
     }
-
-    75%{
-        background-color:lightgreen;
+    75% {
+        background-color: lightgreen;
         transform: rotate(270deg);
-        left:33%;
+        left: 33%;
     }
-
-    100%{
-        background-color:darkslateblue;
+    100% {
+        background-color: darkslateblue;
         transform: rotate(360deg);
-        left:38%;
+        left: 38%;
     }
 }
 
-@keyframes example5-6{
-    0%{
-        transform:rotate(0deg);
-        left:0%;
+@keyframes example5-6 {
+    0% {
+        transform: rotate(0deg);
+        left: 0%;
     }
-
-    25%{
+    25% {
         transform: rotate(90deg);
-        left:0%;
+        left: 0%;
     }
-
-    50%{
-        transform:rotate(180deg);
-        left:30%;
+    50% {
+        transform: rotate(180deg);
+        left: 30%;
         transform: rotate(-180deg);
     }
-
-    75%{
-        background-color:lightgreen;
+    75% {
+        background-color: lightgreen;
         transform: rotate(270deg);
-        left:35%;
+        left: 35%;
     }
-
-    100%{
-        background-color:darkslateblue;
+    100% {
+        background-color: darkslateblue;
         transform: rotate(360deg);
-        left:40%;
+        left: 40%;
     }
 }
 
-@keyframes example5-7{
-    0%{
-        transform:rotate(0deg);
-        left:0%;
+@keyframes example5-7 {
+    0% {
+        transform: rotate(0deg);
+        left: 0%;
     }
-
-    25%{
+    25% {
         transform: rotate(90deg);
-        left:0%;
+        left: 0%;
     }
-
-    50%{
-        transform:rotate(180deg);
-        left:32%;
+    50% {
+        transform: rotate(180deg);
+        left: 32%;
         transform: rotate(-180deg);
     }
-
-    75%{
-        background-color:lightgreen;
+    75% {
+        background-color: lightgreen;
         transform: rotate(270deg);
-        left:37%;
+        left: 37%;
     }
-
-    100%{
-        background-color:darkslateblue;
+    100% {
+        background-color: darkslateblue;
         transform: rotate(360deg);
-        left:42%;
+        left: 42%;
     }
 }
 
-@keyframes example5-8{
-    0%{
-        transform:rotate(0deg);
-        left:0%;
+@keyframes example5-8 {
+    0% {
+        transform: rotate(0deg);
+        left: 0%;
     }
-
-    25%{
+    25% {
         transform: rotate(90deg);
-        left:0%;
+        left: 0%;
     }
-
-    50%{
-        transform:rotate(180deg);
-        left:34%;
+    50% {
+        transform: rotate(180deg);
+        left: 34%;
         transform: rotate(-180deg);
     }
-
-    75%{
-        background-color:lightgreen;
+    75% {
+        background-color: lightgreen;
         transform: rotate(270deg);
-        left:39%;
+        left: 39%;
     }
-
-    100%{
-        background-color:darkslateblue;
+    100% {
+        background-color: darkslateblue;
         transform: rotate(360deg);
-        left:44%;
+        left: 44%;
     }
 }
